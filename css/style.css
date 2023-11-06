@@ -1,0 +1,525 @@
+*{
+    box-sizing: border-box;
+    padding: 0;
+    margin: 0;
+}
+body {
+    perspective: 700px;
+}
+
+.heading {
+    width: 80%;
+    height: 20vh;
+    margin: auto;
+    overflow: auto;
+}
+header figure img {
+    margin-top: 20px;
+    width: 170px;
+    height: 13vh;
+    float: left;
+}
+header nav {
+    float: right;
+    line-height: 19vh;
+    margin-right: 10px;
+}
+
+header nav .links {
+    list-style: none;
+    margin-right: 80px; 
+    display: inline;
+}
+header nav .links li {
+    display: inline-block;
+    margin-left: 20px;
+} 
+
+header nav .links li a {
+    text-decoration: none;
+    color: #0a7d94;
+    font-size: 17px;
+    font-weight: 600;
+    border: 0px;
+    animation-name: link-border;
+    animation-fill-mode: forwards;
+    text-transform: capitalize;
+    font-family: Arial, Helvetica, sans-serif;
+    padding: 4px;
+    position: relative;
+    border-bottom:2px solid rgb(197, 147, 31)  ;
+
+
+}
+header nav .links li a::after {
+    position: absolute;
+    content: " ";
+    width:2px;
+    height: 0;
+    bottom:0;
+    left: 0;
+    background-color: rgb(197, 147, 31) ;
+    transition: 0.4s;
+
+}
+header nav .links li a::before {
+    position: absolute;
+    content: " ";
+    width: 2px;
+    height: 0;
+    bottom: 0;
+    right: 0;
+    background-color: rgb(197, 147, 31) ;
+    transition: 0.4s;
+
+}
+header nav .links li a:hover {
+    border-top: 2px solid  rgb(197, 147, 31) ;
+    transition-delay:0.4s;
+}
+header nav .links li a:hover::after, header nav .links li a:hover::before {
+    width: 2px;
+    height: 100%;
+}
+
+header nav .icons {
+    display: inline;
+    font-size: 27px;
+}
+header nav .icons i{
+    margin-left: 10px;
+    color: #0a7d94;
+}
+header nav .icons i .cart {
+    margin-left: auto;
+    background-color: #0a7d94;
+    width: 23px;
+    height: 23px;
+    border-radius: 50%;
+    color: azure;
+}
+/* ////////////////////////////////////////////////////////////// */
+main {
+    margin-top: 30px;
+}
+
+main .profile-container {
+    width: 80%;
+    height:75vh ;
+    margin: auto;
+}
+main .profile-container .profile-content{
+    position: relative;
+    width: 100%;
+    height: 75vh;
+}
+main .profile-container .profile-content img {
+    width: 100%;
+    height: 100%;
+    position: absolute;
+}
+main .profile-container .profile-content .profile-info {
+    position: absolute;
+    top:350px ;
+    right: 170px;
+
+}
+main .profile-container .profile-content .profile-info button {
+    width: 150px;
+    height: 50px;
+    border: 1px solid  #0a7d94;
+    background-color:white;
+    color:  #0a7d94;
+    font-size: 18px;
+    font-weight: 600;
+}
+main .profile-container .profile-content .profile-info button:hover {
+    background-color: rgb(202, 153, 39);
+    border: 1px solid   rgb(202, 153, 39);
+    color:  white;
+    
+
+}
+/* section-one ////////////////////////////////////////////////////////////////////////////// */
+section {
+    margin-top: 30px;
+}
+.sec2-container {
+    width: 80%;
+    height: 65vh;
+    margin: auto;
+  }
+  .sec-heading {
+    padding-top: 20px;
+    text-align: center;
+    font-size: 23px;
+    text-transform: capitalize;
+  }
+  .sec-heading h2 {
+    color: #0b4265
+  }
+  .h2-line {
+    margin:5px auto ;
+    width: 100px;
+    height: 3px;
+    transition: 1s;
+    background-color: rgb(179, 137, 40);
+  }
+  .sec-heading:hover .h2-line{
+    transform: scale(1.5, 1);
+  
+  }
+  .sec2-content {
+    margin-top: 50px;
+    display: grid;
+    grid-template-columns: repeat(4,1fr);
+    grid-template-rows: repeat(2,1);
+    grid-auto-rows: minmax(100px, auto);
+    grid-gap: 30px 30px;
+    
+  
+  }
+  .website-info {
+    background-color: rgba(27, 129, 163, 0.1);
+    grid-column: 1/3;
+    border: 2px dotted rgb(187, 149, 52);
+  }
+  .website-info-heading {
+    display: flex;
+    flex-direction: row;
+    justify-content: flex-start;
+    padding: 20px 20px;
+  
+  }
+  .website-info-heading i {
+    font-size: 50px;
+    color: rgb(212, 170, 65) ;
+  }
+  .website-header h3 {
+    font-size: 30px;
+    padding-left: 10px;
+    color: #0b4265
+  }
+  .website-header span {
+    padding-left: 10px;
+  }
+  
+  .website-info p {
+    margin-top: 20px;
+    font-size: 20px;
+    padding: 0px 20px;
+    text-align: justify;
+  
+  }
+  
+  .decoration {
+    display: flex;
+    flex-direction: row;
+    justify-content: flex-end;
+    margin: 80px 10px;
+    align-items: flex-end;
+  }
+  .decoration-line {
+    width: 80px;
+    height: 3px;
+    background-color:rgb(177, 164, 131);
+    margin-left: 10px;
+  }
+  .discount-item {
+    position: relative;
+    transition: 0.5s;
+    box-shadow: -12px -12px 10px 0.1px #042a41;
+  
+  
+  }
+  
+  .discount-item img {
+    width: 100%;
+    height: 100%;
+    position: absolute;
+  }
+  .discount-item-content {
+    position: absolute;
+    font-size: 25px;
+    top: 20px;
+    left: 10px;
+  
+  }
+  .discount-item-content h5 {
+    color: rgb(200, 164, 72);
+    animation-name: discount-glow;
+    animation-duration: 1s;
+    animation-iteration-count: infinite;
+    margin-top: 5px;
+  }
+  @keyframes discount-glow {
+    0% {
+        text-shadow: 1px 1px 5px  rgb(200, 164, 72);
+        
+    }
+    50%{
+        text-shadow: 1px 1px 15px  rgb(200, 164, 72);
+        font-size: 22px;
+    }
+    100% {
+        text-shadow: 1px 1px 5px  rgb(200, 164, 72);
+    }
+  }
+  .discount-item-content h4 {
+    color: #0b4265
+  
+  }
+  .discount-item:hover {
+    transform:scale(1.01,1.01);
+    box-shadow: 1px 1px 30px 1px  #042a41;
+  
+  }
+  
+  .sec2-item {
+    transition: 0.5s;
+    box-shadow: -12px -12px 10px 1px #042a41;
+
+  }
+  .sec2-item figure img {
+    width: 100%;
+    height: 49%;
+  }
+  .sec2-item-info {
+    margin-top: 20px;
+    padding-left: 10px;
+  }
+  .sec2-item-info h3 {
+    text-transform: capitalize;
+    color: rgb(103, 98, 98);
+  }
+  .sec2-item-info .collection-name {
+    display: flex;
+    flex-direction: row;
+    justify-content: space-between;
+  
+  }
+  .sec2-item-info .collection-name h3 {
+    padding-top: 8px;
+    font-size: 20px;
+    /* color: #010506; */
+    color: rgb(179, 137, 40)
+  
+  }
+  .sec2-item-info .collection-name i {
+    /* margin-left: 50px; */
+    width: 40px;
+    height: 30px;
+    line-height: 30px;
+    text-align: center;
+    font-size: 20px;
+    visibility: hidden;
+  
+  }
+  .sec2-item:hover {
+    box-shadow: 1px 1px 30px 1px  #042a41;
+    transform: scale(1.01,1.01);
+  }
+  .sec2-item:hover .sec2-item-info .collection-name i {
+    background-color:rgb(183, 152, 74);
+    visibility:visible;
+  }
+/* scetion-two /////////////////////////////////////////////// */
+
+
+.section3 {
+    margin-top: 550px;
+}
+.sec3-container {
+    width: 80%;
+    height: 180vh;
+    margin: auto;
+}
+.sec3-categories {
+    text-align: center;
+    margin-top: 30px;
+    height: 8%;
+}
+.sec3-categories button {
+    width: 150px;
+    height: 50px;
+    border-bottom: #1174b1;
+    background-color: white;
+    font-size: 20px;
+    border: 0;
+    text-transform: capitalize;
+
+}
+.sec3-categories .first-catogery {
+    transform: scale(1.05, 1.05);
+    font-weight: bold;
+    border-bottom:2px solid  rgb(179, 137, 40) ;
+}
+.sec3-content {
+    margin-top: 30px;
+    width: 100%;
+    height: 75%;
+}
+.collection-sec3-items {
+    width: 100%;
+    height: 50%;
+    display: flex;
+    flex-direction: row;
+    justify-content: space-between;
+}
+.second-collection {
+    margin-top: 10px;
+}
+.sec3-item {
+    width: 32%;
+    height: 100%;
+    border: 1px solid  rgb(169, 126, 27);
+    transition: 1s;
+    
+}
+.sec3-item-cart{
+    width: 100%;
+    height: 80%;
+    margin: auto;
+    position: relative;
+    transform-style: preserve-3d;
+    transition: 1s;
+
+}
+.cart-img, .sec3-item-cart img, .img-overlay {
+    position: absolute;
+    width: 100%;
+    height: 100%;
+}
+.cart-img {
+    z-index: 2 ;
+    backface-visibility: hidden;
+}
+
+.sec3-item-cart .img-overlay {
+    text-align: center;
+    padding-top: 50% ;
+    background-color: rgba(0,0,0,0.5);
+    transform: rotateY(180deg);
+    z-index: 1;
+}
+.sec3-item-cart .img-overlay button {
+    width: 120px;
+    height: 50px;
+    font-size: 17px;
+}
+.sec3-item-cart .img-overlay .second-button {
+    background-color:rgb(179, 137, 40);
+    color: azure;
+}
+.sec3-item:hover .sec3-item-cart{
+    transform: rotateY(180deg);
+}
+.sec3-item-info{
+    height: 20%;
+    padding-top: 10px;
+    font-size: 20px;
+    /* background-color:rgba(45, 139, 198, 0.3); */
+    padding-left: 10px;
+    transition: .8s;
+
+}
+.rating {
+    color:rgb(179, 137, 40) ;
+}
+.sec3-item-info p {
+    line-height: 30px;
+}
+.sec3-item:hover {
+    transform: scale(1.05,1.05);
+    box-shadow: 1px 1px 20px 2px black;
+}
+.sec3-item:hover .sec3-item-info {
+    background-color: rgba(0,0,0,0.5);
+    transition-delay: 0.35s;
+
+}
+.sec3-item:hover .rating {
+    color:rgb(242, 185, 54) ;
+    transition-delay: 0.35s;
+
+}
+
+
+/* section-three /////////////////////////////////////////////// */
+
+footer {
+    margin-top: 50px;
+}
+.sec4-container {
+    width: 100%;
+    height: 37vh;
+    background-color: rgba(27, 129, 163, 0.1);
+
+}
+
+.sec4-content {
+    display: flex;
+    flex-direction: row;
+    align-items: center;
+    margin-top: 50px;
+    height: 17vh;
+}
+
+.sec4-item {
+    flex-grow: 1;
+    text-align: center;
+    font-size: 22px;
+    border-left: 1px solid  rgb(212, 170, 65) ;
+    height: 100%;
+    padding-top: 10px;
+}
+.sec4-item-icon {
+    height: 50%;
+    position: relative;
+}
+.sec4-item-icon .icon-front {
+    position: absolute;
+    bottom: 25%;
+    left: 50%;
+    transform: translateX(-50%);
+    transition:  0.3s ease-in-out;
+    z-index: 1;
+    font-size: 40px;
+    color: #6aacd5 ;
+}
+  
+.sec4-item-icon .icon-back {
+    position: absolute;
+    top: 50%;
+    left: 50%;
+    transform: translateX(-50%);
+    transition: top 0.3s ease-in-out, opacity 0.2s ease-in-out;
+    opacity: 0;
+    font-size: 40px;
+    color: #1174b1 ;
+
+}
+  
+.sec4-item:hover .icon-front {
+    bottom: 60%;
+    visibility: hidden;
+}
+  
+.sec4-item:hover .icon-back {
+    top: 25%;
+    opacity: 1;
+    transition-delay:0.35s
+
+}
+.sec4-item-info {
+    margin-top: 10px;
+}
+.sec4-item-info h4 {
+    color: rgb(179, 137, 40);
+}
+.sec4-item-info span {
+    font-size: 17px;
+    color: rgb(83, 79, 79);
+}
+/* footer ////////////////////////////////////////////////////////////// */
+
